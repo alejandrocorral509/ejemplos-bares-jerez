@@ -12,6 +12,9 @@
     try { localStorage.setItem("carta-demo", JSON.stringify(state)); } catch (e) {}
   }
   function cargar() {
+    // ?lang=en o ?lang=fr abre la carta en ese idioma (útil para mandar el enlace)
+    var pedido = new URLSearchParams(window.location.search).get("lang");
+    if (IDIOMAS.indexOf(pedido) >= 0) { state.lang = pedido; return; }
     try {
       var s = JSON.parse(localStorage.getItem("carta-demo") || "null");
       if (s && IDIOMAS.indexOf(s.lang) >= 0) state.lang = s.lang;

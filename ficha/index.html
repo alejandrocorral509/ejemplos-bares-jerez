@@ -132,12 +132,18 @@
     (function () {
       var box = document.querySelector(".comparar");
       var tabs = document.querySelectorAll("[data-tab]");
+      function ver(nombre) {
+        box.setAttribute("data-ver", nombre);
+        tabs.forEach(function (o) { o.setAttribute("aria-selected", String(o.getAttribute("data-tab") === nombre)); });
+      }
       tabs.forEach(function (t) {
-        t.addEventListener("click", function () {
-          box.setAttribute("data-ver", t.getAttribute("data-tab"));
-          tabs.forEach(function (o) { o.setAttribute("aria-selected", String(o === t)); });
-        });
+        t.addEventListener("click", function () { ver(t.getAttribute("data-tab")); });
       });
+      // ficha/#despues abre directamente la versión buena
+      if (window.location.hash === "#despues" || window.location.hash === "#ficha-despues") {
+        ver("despues");
+        if (window.location.hash === "#ficha-despues") document.getElementById("ficha-despues").scrollIntoView();
+      }
     })();
   </script>
 </body>
