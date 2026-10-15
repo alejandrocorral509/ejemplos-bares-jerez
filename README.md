@@ -23,6 +23,6 @@ Copiar `carta/` a la carpeta del cliente, cambiar `carta-data.js` (nombre, plato
 
 ## Pendiente
 
-- [ ] **Publicarla** (GitHub Pages o Netlify). Sin publicar, el QR solo funciona en este ordenador.
+- [x] Publicada en GitHub Pages: https://alejandrocorral509.github.io/ejemplos-bares-jerez/ (repositorio `ejemplos-bares-jerez`; cada `git push` a `main` la actualiza en un minuto).
 - [ ] Tu teléfono o WhatsApp en la portada (`data-todo="contacto"`).
 - [ ] Enlace a la web de Alfredo cuando esté publicada (`data-todo="url-alfredo"`), y preguntarle antes si te deja enseñarla.
