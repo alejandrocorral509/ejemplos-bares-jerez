@@ -1,0 +1,83 @@
+/* Antes y después de una ficha de Google Maps (simulación) */
+
+.intro { padding: 28px 0 16px; max-width: 640px; }
+.intro h1 { font-size: clamp(28px, 7vw, 44px); color: var(--oloroso); }
+.intro p { color: var(--tinta-2); margin: 10px 0 0; }
+
+.pestanas { display: flex; gap: 6px; background: var(--cal-2); padding: 4px; border-radius: 999px; margin: 8px 0 16px; width: max-content; }
+.pestanas button {
+  border: 0; background: none; border-radius: 999px; padding: 9px 22px; min-height: 40px;
+  font-weight: 700; cursor: pointer; color: var(--tinta-2);
+}
+.pestanas button[aria-selected="true"] { background: var(--oloroso); color: var(--cal); }
+
+.comparar[data-ver="antes"] .ficha--despues,
+.comparar[data-ver="despues"] .ficha--antes { display: none; }
+
+.ficha {
+  background: #fff; border: 1px solid var(--linea); border-radius: 20px; overflow: hidden;
+  box-shadow: 0 1px 2px rgba(36, 23, 15, .06);
+  position: relative; max-width: 460px;
+}
+.ficha__etiqueta {
+  position: absolute; top: 12px; left: 12px; z-index: 2; margin: 0;
+  background: var(--rojo); color: #fff; font-size: 13px; font-weight: 700;
+  padding: 4px 12px; border-radius: 999px;
+}
+.ficha__etiqueta--bien { background: var(--verde); }
+
+.fotos { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: 92px 92px; gap: 3px; }
+.fotos .foto:first-child { grid-row: span 2; }
+.fotos .foto:nth-child(4) { grid-column: span 2; }
+.fotos--una { grid-template-columns: 1fr; grid-template-rows: 184px; }
+.foto { display: flex; align-items: flex-end; padding: 8px 10px; color: #fff; font-size: 12px; font-weight: 600; }
+.foto span { white-space: nowrap; background: rgba(0,0,0,.35); padding: 2px 8px; border-radius: 6px; }
+.foto--cliente { background: linear-gradient(160deg, #4b4540, #2a2522); filter: saturate(.3); justify-content: center; align-items: center; }
+.foto--fachada { background: linear-gradient(180deg, #F4EEE4 0 72%, #E3B04B 72%); color: var(--tinta); }
+.foto--fachada span { background: rgba(255,255,255,.8); color: var(--tinta); }
+.foto--barra { background: repeating-linear-gradient(90deg, #5B2E1A 0 22px, #6E3A22 22px 26px); }
+.foto--tapa { background: radial-gradient(circle at 50% 55%, #C9874A 0 30%, #F3ECE0 31%); }
+.foto--copa { background: radial-gradient(ellipse at 50% 60%, #F1D98A 0 22%, #FBF7F0 23%); color: var(--tinta); }
+.foto--tapa span, .foto--copa span { background: rgba(36,23,15,.6); color: #fff; }
+
+.ficha__cuerpo { padding: 16px 18px 20px; }
+.ficha__nombre { font-family: var(--ff-body); font-weight: 700; font-size: 22px; }
+.ficha__nota { margin: 4px 0 12px; font-size: 14px; color: var(--tinta-2); }
+.estrellas { color: #D9A21B; letter-spacing: 1px; }
+
+.botones { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.boton {
+  font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--linea); text-decoration: none; color: var(--tinta);
+}
+.boton--falta { border-style: dashed; color: var(--rojo); background: #FBEFEC; border-color: #E9C4BC; }
+.boton--bien { background: #E4EFE6; border-color: #BFD8C6; color: var(--verde); }
+
+.datos { list-style: none; margin: 0; padding: 0; font-size: 14px; }
+.datos li { padding: 8px 0; border-top: 1px solid var(--linea); }
+.datos__k { display: block; font-size: 12px; font-weight: 700; color: var(--tinta-2); }
+.datos .falta { color: var(--rojo); }
+.alerta, .ok { display: block; font-size: 12px; font-weight: 600; margin-top: 2px; }
+.alerta { color: var(--rojo); }
+.ok { color: var(--verde); }
+
+.ficha__sub { font-family: var(--ff-body); font-size: 15px; font-weight: 700; margin: 16px 0 6px; }
+.resena { font-size: 14px; padding: 10px 0; border-top: 1px solid var(--linea); }
+.resena p { margin: 0 0 4px; }
+.resena__autor { font-weight: 700; }
+.sin-respuesta { color: var(--rojo); font-size: 12px; font-weight: 600; }
+.respuesta { margin-top: 8px; background: var(--cal-2); border-radius: 10px; padding: 8px 12px; }
+.respuesta__autor { font-size: 12px; font-weight: 700; color: var(--verde); }
+
+.cambios { max-width: 640px; padding: 28px 0 40px; }
+.cambios h2 { font-size: 28px; color: var(--oloroso); margin-bottom: 10px; }
+.cambios ol { padding-left: 22px; margin: 0 0 16px; }
+.cambios li { margin-bottom: 6px; }
+.precio-caja { background: var(--albero-2); border-radius: var(--radio); padding: 14px 16px; margin: 0 0 12px; }
+.honesto { font-size: 14px; color: var(--tinta-2); margin: 0; }
+
+@media (min-width: 900px) {
+  .pestanas { display: none; }
+  .comparar { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  .comparar .ficha { display: block !important; max-width: none; }
+}

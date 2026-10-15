@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carta · Tabanco La Muestra (ejemplo)</title>
+  <meta name="description" content="Carta de ejemplo en español, inglés y francés, con los 14 alérgenos.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="carta.css">
+</head>
+<body>
+  <p class="aviso-demo">Carta de ejemplo: el local, los platos, los precios y los alérgenos son inventados. <a href="../">Ver los demás ejemplos</a></p>
+
+  <header class="cabecera">
+    <div class="wrap cabecera__fila">
+      <div>
+        <h1 class="cabecera__local" data-local>Tabanco La Muestra</h1>
+        <p class="cabecera__sub"><span data-t="titulo">Carta</span> · <span data-ciudad>Jerez de la Frontera</span></p>
+      </div>
+      <div class="idiomas" role="group" aria-label="Idioma / Language / Langue">
+        <button type="button" data-lang="es" lang="es">ES</button>
+        <button type="button" data-lang="en" lang="en">EN</button>
+        <button type="button" data-lang="fr" lang="fr">FR</button>
+      </div>
+    </div>
+    <nav class="secciones" aria-label="Secciones">
+      <div class="wrap secciones__fila" data-nav></div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <details class="filtro" data-filtro>
+      <summary><span data-t="filtro">Ocultar platos con:</span> <span class="filtro__cuenta" data-cuenta hidden></span></summary>
+      <div class="filtro__chips" data-chips></div>
+      <button type="button" class="filtro__quitar" data-quitar data-t="quitar" hidden>Mostrar todo</button>
+    </details>
+
+    <div data-carta></div>
+
+    <footer class="pie">
+      <p data-t="nota">Si tienes alguna alergia, díselo al camarero.</p>
+      <p data-t="iva">IVA incluido.</p>
+    </footer>
+  </main>
+
+  <script src="carta-data.js"></script>
+  <script src="carta.js"></script>
+</body>
+</html>

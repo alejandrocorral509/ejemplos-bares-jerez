@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ficha de Google: antes y después (ejemplo)</title>
+  <meta name="description" content="Cómo cambia la ficha de Google Maps de un tabanco cuando se completa y se atiende.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="ficha.css">
+</head>
+<body>
+  <p class="aviso-demo">Simulación con un local inventado. No es una captura de Google. <a href="../">Ver los demás ejemplos</a></p>
+
+  <main class="wrap">
+    <header class="intro">
+      <h1>Tu ficha de Google, antes y después</h1>
+      <p>Es lo primero que ve un cliente que busca «tabanco» o «tapas» en Jerez, y casi siempre lo ve antes que tu web o tu Instagram.</p>
+    </header>
+
+    <div class="pestanas" role="tablist" aria-label="Elegir versión">
+      <button type="button" role="tab" id="tab-antes" aria-controls="ficha-antes" aria-selected="true" data-tab="antes">Antes</button>
+      <button type="button" role="tab" id="tab-despues" aria-controls="ficha-despues" aria-selected="false" data-tab="despues">Después</button>
+    </div>
+
+    <div class="comparar" data-ver="antes">
+
+      <!-- ANTES -->
+      <article class="ficha ficha--antes" id="ficha-antes" role="tabpanel" aria-labelledby="tab-antes">
+        <p class="ficha__etiqueta">Antes</p>
+        <div class="fotos fotos--una">
+          <div class="foto foto--cliente"><span>1 foto, subida por un cliente</span></div>
+        </div>
+        <div class="ficha__cuerpo">
+          <h2 class="ficha__nombre">Tabanco La Muestra</h2>
+          <p class="ficha__nota"><strong>3,9</strong> <span class="estrellas" aria-label="3,9 de 5">★★★★☆</span> (212) · Bar</p>
+
+          <div class="botones">
+            <span class="boton">Llamar</span>
+            <span class="boton">Cómo llegar</span>
+            <span class="boton boton--falta">Sin web</span>
+            <span class="boton boton--falta">Sin carta</span>
+          </div>
+
+          <ul class="datos">
+            <li><span class="datos__k">Dirección</span> Calle de Ejemplo, 1 · Jerez de la Frontera</li>
+            <li><span class="datos__k">Horario</span> Abierto · Cierra a las 23:00 <span class="alerta">Horario sin actualizar desde 2023</span></li>
+            <li class="falta"><span class="datos__k">Descripción</span> Vacía</li>
+            <li class="falta"><span class="datos__k">Reservas</span> Solo por teléfono</li>
+          </ul>
+
+          <h3 class="ficha__sub">Reseñas</h3>
+          <div class="resena">
+            <p class="resena__autor">Manuel R. · <span class="estrellas">★★★☆☆</span></p>
+            <p>Buen fino y buenos chicharrones, pero llamé tres veces para reservar y nadie lo cogió.</p>
+            <p class="sin-respuesta">Sin respuesta del propietario</p>
+          </div>
+          <div class="resena" lang="en">
+            <p class="resena__autor">Sarah K. · <span class="estrellas">★★★☆☆</span></p>
+            <p>Lovely place, but the menu was only in Spanish and it was hard to know what to order.</p>
+            <p class="sin-respuesta" lang="es">Sin respuesta del propietario</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- DESPUÉS -->
+      <article class="ficha ficha--despues" id="ficha-despues" role="tabpanel" aria-labelledby="tab-despues">
+        <p class="ficha__etiqueta ficha__etiqueta--bien">Después</p>
+        <div class="fotos">
+          <div class="foto foto--fachada"><span>Fachada</span></div>
+          <div class="foto foto--barra"><span>Barra</span></div>
+          <div class="foto foto--tapa"><span>Chicharrones</span></div>
+          <div class="foto foto--copa"><span>Copa de fino</span></div>
+        </div>
+        <div class="ficha__cuerpo">
+          <h2 class="ficha__nombre">Tabanco La Muestra</h2>
+          <p class="ficha__nota"><strong>3,9</strong> <span class="estrellas" aria-label="3,9 de 5">★★★★☆</span> (212) · Tabanco · Bar de vinos</p>
+
+          <div class="botones">
+            <span class="boton">Llamar</span>
+            <span class="boton">Cómo llegar</span>
+            <a class="boton boton--bien" href="../carta/">Carta</a>
+            <span class="boton boton--bien">Reservar por WhatsApp</span>
+            <span class="boton boton--bien">Web</span>
+          </div>
+
+          <ul class="datos">
+            <li><span class="datos__k">Dirección</span> Calle de Ejemplo, 1 · Jerez de la Frontera</li>
+            <li><span class="datos__k">Horario</span> Martes a domingo, 12:30-16:30 y 20:00-0:00 · Lunes cerrado
+              <span class="ok">Horario de Feria y festivos publicado</span></li>
+            <li><span class="datos__k">Descripción</span> Tabanco con vinos de Jerez de bota y de botella, tapas y raciones. Carta en español, inglés y francés.</li>
+            <li><span class="datos__k">Servicios</span> Terraza · Acepta tarjeta · Carta en inglés</li>
+          </ul>
+
+          <h3 class="ficha__sub">Reseñas</h3>
+          <div class="resena">
+            <p class="resena__autor">Manuel R. · <span class="estrellas">★★★☆☆</span></p>
+            <p>Buen fino y buenos chicharrones, pero llamé tres veces para reservar y nadie lo cogió.</p>
+            <div class="respuesta">
+              <p class="respuesta__autor">Respuesta del propietario</p>
+              <p>Gracias, Manuel, y perdona lo del teléfono. Ya se puede reservar por WhatsApp desde esta ficha. Te esperamos.</p>
+            </div>
+          </div>
+          <div class="resena" lang="en">
+            <p class="resena__autor">Sarah K. · <span class="estrellas">★★★☆☆</span></p>
+            <p>Lovely place, but the menu was only in Spanish and it was hard to know what to order.</p>
+            <div class="respuesta">
+              <p class="respuesta__autor" lang="es">Respuesta del propietario</p>
+              <p>Thank you, Sarah. Our menu is now in English and French: just scan the QR code on your table.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <section class="cambios">
+      <h2>Qué hago en tu ficha</h2>
+      <ol>
+        <li>Pongo el horario real, también el de festivos, Feria y Navidad.</li>
+        <li>Subo fotos tuyas del local, de la barra y de los platos.</li>
+        <li>Elijo bien la categoría: «Tabanco» o «Bar de vinos» en vez de solo «Bar».</li>
+        <li>Escribo la descripción con lo que de verdad tienes.</li>
+        <li>Enlazo la carta, la web y la reserva por WhatsApp.</li>
+        <li>Contesto las reseñas que tengas sin responder. Tú lees cada respuesta antes de publicarla.</li>
+      </ol>
+      <p class="precio-caja"><strong>Ficha de Google a punto: 99 €</strong>, pago único. Lo dejo hecho en una tarde y con tu cuenta, para que la ficha siga siendo tuya.</p>
+      <p class="honesto">No cambio tu nota ni prometo salir el primero en Google. Lo que cambia es que quien te encuentra tiene lo que necesita para venir.</p>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var box = document.querySelector(".comparar");
+      var tabs = document.querySelectorAll("[data-tab]");
+      tabs.forEach(function (t) {
+        t.addEventListener("click", function () {
+          box.setAttribute("data-ver", t.getAttribute("data-tab"));
+          tabs.forEach(function (o) { o.setAttribute("aria-selected", String(o === t)); });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

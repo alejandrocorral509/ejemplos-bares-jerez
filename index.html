@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplos para bares y tabancos · Alejandro Corral</title>
+  <meta name="description" content="Carta en tres idiomas, ficha de Google y web para bares y tabancos de Jerez.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="base.css">
+  <style>
+    .intro { padding: 32px 0 8px; max-width: 640px; }
+    .intro h1 { font-size: clamp(30px, 8vw, 48px); color: var(--oloroso); }
+    .intro p { color: var(--tinta-2); margin: 10px 0 0; }
+    .lista { display: grid; gap: 16px; padding: 20px 0; }
+    .tarjeta { background: #fff; border: 1px solid var(--linea); border-radius: 18px; padding: 20px; display: grid; gap: 16px; }
+    .tarjeta h2 { font-size: 26px; color: var(--oloroso); }
+    .tarjeta p { margin: 6px 0 0; color: var(--tinta-2); }
+    .acciones { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; font-weight: 700; text-decoration: none; background: var(--oloroso); color: var(--cal); }
+    .btn--sec { background: var(--cal-2); color: var(--oloroso); }
+    .qr { display: flex; align-items: center; gap: 14px; background: var(--cal); border-radius: 14px; padding: 12px; }
+    .qr [data-qr] { width: 112px; height: 112px; flex-shrink: 0; background: #fff; padding: 6px; border-radius: 8px; }
+    .qr [data-qr] svg { width: 100%; height: 100%; display: block; }
+    .qr p { margin: 0; font-size: 14px; }
+    .pendiente { font-size: 14px; font-weight: 600; color: var(--oloroso-2); }
+    .precios { border-top: 1px solid var(--linea); padding: 20px 0 40px; max-width: 640px; }
+    .precios h2 { font-size: 24px; color: var(--oloroso); margin-bottom: 8px; }
+    .precios ul { padding-left: 20px; margin: 0 0 12px; }
+    .contacto { font-weight: 700; }
+    @media (min-width: 760px) {
+      .tarjeta--qr { grid-template-columns: 1fr auto; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="intro">
+      <h1>Lo que hago para bares y tabancos</h1>
+      <p>Alejandro Corral, de Jerez. Trabajo en hostelería y monto la parte digital de los locales: la carta, la ficha de Google y la web.</p>
+    </header>
+
+    <div class="lista">
+      <article class="tarjeta tarjeta--qr">
+        <div>
+          <h2>Carta en tres idiomas</h2>
+          <p>Español, inglés y francés, con los 14 alérgenos. El cliente puede ocultar los platos que no puede comer, y tú cambias un precio en un minuto.</p>
+          <div class="acciones">
+            <a class="btn" href="carta/">Ver la carta</a>
+            <a class="btn btn--sec" href="carta/qr.html">Cartelitos para las mesas</a>
+          </div>
+        </div>
+        <div class="qr">
+          <div data-qr></div>
+          <p>Escanéala con tu móvil, como lo haría un cliente.</p>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <div>
+          <h2>Tu ficha de Google, antes y después</h2>
+          <p>Horario al día, fotos tuyas, la carta y la reserva a un toque, y las reseñas contestadas.</p>
+          <div class="acciones"><a class="btn" href="ficha/">Ver el ejemplo</a></div>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <div>
+          <h2>Web de un bar de Jerez</h2>
+          <p>Alfredo Café &amp; Copas, en la avenida Lola Flores: carta, horario, cómo llegar y botón para llamar.</p>
+          <p class="pendiente" data-todo="url-alfredo">Pendiente de publicar.</p>
+        </div>
+      </article>
+    </div>
+
+    <section class="precios">
+      <h2>Precios</h2>
+      <ul>
+        <li><strong>Ficha de Google a punto:</strong> 99 €, pago único.</li>
+        <li><strong>Local completo</strong> (ficha, carta en tres idiomas con QR y página del local): 290 € y 39 € al mes, con los cambios de carta y las respuestas a reseñas incluidos.</li>
+      </ul>
+      <p class="contacto" data-todo="contacto">Teléfono o WhatsApp: pendiente</p>
+    </section>
+  </main>
+
+  <script src="lib/qrcode.js"></script>
+  <script src="qr.js" data-destino="carta/"></script>
+</body>
+</html>

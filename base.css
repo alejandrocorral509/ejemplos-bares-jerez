@@ -1,0 +1,48 @@
+/* Ejemplos para enseñar en las visitas — estilos comunes */
+
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("assets/fonts/dm-serif-display.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/fonts/manrope.woff2") format("woff2");
+  font-weight: 300 800; font-style: normal; font-display: swap;
+}
+
+:root {
+  --cal: #FBF7F0;        /* pared encalada */
+  --cal-2: #F3ECE0;
+  --albero: #E3B04B;
+  --albero-2: #F6E3B8;
+  --oloroso: #5B2E1A;
+  --oloroso-2: #8A4B2C;
+  --tinta: #24170F;
+  --tinta-2: #6B5647;
+  --linea: #E2D6C6;
+  --verde: #2F6B45;
+  --rojo: #A23B2A;
+  --ff-display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --ff-body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radio: 14px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--cal); color: var(--tinta);
+  font-family: var(--ff-body); font-size: 16px; line-height: 1.55;
+}
+h1, h2, h3 { font-family: var(--ff-display); font-weight: 400; line-height: 1.1; margin: 0; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--oloroso-2); outline-offset: 3px; border-radius: 6px; }
+
+.aviso-demo {
+  background: var(--tinta); color: var(--cal);
+  font-size: 13px; text-align: center; padding: 8px 16px;
+}
+.aviso-demo a { color: var(--albero-2); }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
